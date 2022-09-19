@@ -1,3 +1,11 @@
+#tema{
+    height: 400px;
+    width: 100%;
+   background-image: url(old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall.jpg);
+      
+}
+
+
 body,ul{
 margin: 0px;
 padding: 0px;
@@ -45,30 +53,101 @@ background: #e7e7e7;
     display: none;
 }
 
-@media(max-width: 600px)
+@media(max-width: 600px){
+    #btn-mobile{
+        display: block;
+    }
+    #menu{
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 70px;
+        right: 0px;
+        background: #e7e7e7;
+        height: 0px;
+        transition: .6s;
+        z-index: 1000;
+        height: 0px;
+        visibility: hidden;
+         overflow-y: hidden;
 
+    }
 
+    #nav.active #menu{
+        height: calc(100vh - 70px);
+        visibility: visible;
+        overflow-y: auto;
 
+    }
 
+    #menu a {
+        padding: 1rem 0;
+        margin: 0px 1rem;
+        border-bottom: 2px solid rgba(0, 0, 0, .05);
+    }
+    #btn-mobile{
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: .5rem;
+    }
 
+    #hamburguer {
+        display: block;
+        border-top: 2px solid;
+        width: 20px;
 
+    }
+    #hamburguer::after, #hamburguer::before{
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color: currentColor;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
 
+    #nav.active #hamburguer {
+        border-top-color: transparent;
 
-/*body{
-    //background-color: rgb(15, 15, 15);
-    box-sizing: border-box;
-    margin: 0px
-    padding: 0px
+    }
+    #nav.active #hamburguer::before{
+        transform: rotate(135deg);
+
+    }
+    #nav.active #hamburguer::after{
+        transform: rotate(-135deg);
+        top: -7px;
+
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 h1{
-color: #0000fff3;
+color: #e9e9f1f3;
 text-align: center;
+font-size: 50px;
 
 }
 h3{
-    color: rgb(235, 29, 29);
+    color: rgb(243, 233, 233);
     text-align: center;
-    box-shadow: ;
+    font-size: 28px;
     
 }
 */
